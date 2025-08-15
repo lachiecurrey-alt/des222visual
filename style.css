@@ -1,0 +1,58 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #F48383; /* Updated background color */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f2f2f2;
+}
+
+/* Each image + text section */
+.essay-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.essay-section img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Make every second image smaller */
+.essay-section:nth-child(even) img {
+    max-width: 40%; /* smaller than the others */
+}
+
+.essay-section p {
+    max-width: 50%;
+}
+
+/* Tablet layout */
+@media (max-width: 768px) {
+    .essay-section {
+        flex-direction: column;
+    }
+
+    .essay-section img,
+    .essay-section p {
+        max-width: 100%;
+    }
+}
+
+/* Phone layout */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+}
